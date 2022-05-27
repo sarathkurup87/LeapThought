@@ -1,0 +1,42 @@
+<div class="container">
+  <article class="sample-column">
+    <form class="input-group-form" [formGroup]="userForm">
+      <h2>Label Manager</h2>
+      <div class="container">
+
+
+        <main class="container1">
+          <div class="wrapper">
+            <div class="main-ctn">
+              <div class="left">
+                <ul id="tree" class="tree"></ul>
+              </div>
+            </div>
+          </div>
+        </main>
+
+        <div class="hidden" id="template">
+          <ul>
+            <li class="tree-node">
+              <input placeholder="Tag Name" />
+              <span class="controls">
+                &raquo;
+                <a class="btn-link" href="#" data-func="add-sibling">+sibling</a>
+                |
+                <a class="btn-link" href="#" data-func="add-child">+child</a>
+                |
+                <a class="btn-link" href="#" data-func="delete">remove</a>
+              </span>
+            </li>
+          </ul>
+        </div>
+        <hr>
+        <input style="width: 10%;float: left" id="SaveName" name="SaveName" placeholder="File Name" type="text"
+          class="form-control" formControlName="SaveName">
+        <button id="buttonId" style="margin-left: 10px;margin-top: 4px;" class="button" type="button" (click)="save()"
+          disabled="disabled">Save</button>
+
+      </div>
+    </form>
+  </article>
+</div>

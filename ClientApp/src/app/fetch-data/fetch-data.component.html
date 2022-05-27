@@ -1,0 +1,10 @@
+<h4 id="tableLabel">Label List #ApiCall #Json</h4>
+<p *ngIf="!label"><em>Loading...</em></p>
+<pre>{{ label | json }}</pre>
+<hr>
+<div *ngFor="let lbl of _LabelTree">
+  <h6>{{ lbl.saveName }}</h6>
+  <tree-root #tree [nodes]="lbl.json" [options]="options"></tree-root>
+  <hr>
+</div>
+
